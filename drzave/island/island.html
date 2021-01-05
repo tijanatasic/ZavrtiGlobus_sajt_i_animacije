@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island</title>
+    <link rel="icon" href="../../favicon.ico">
+    <!-- booststrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="animacija"> </div>
+
+    <script src="../island/lottie.js"></script>
+    <audio id="myAudio">
+        <source src="island.wav" type="audio/wav">
+      </audio>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button id="pusti" class="btn btn-info" onclick="playAudio()" type="button">Pusti animaciju</button>
+        <button id="zaustavi" class="btn btn-info" onclick="stopAudio()" type="button">Zaustavi animaciju</button>
+    </div>
+<script>
+    var x = document.getElementById("myAudio"); 
+    function playAudio() { 
+    x.play(); 
+    }
+    function stopAudio() { 
+    x.pause(); 
+    }
+    let iconSkipForward = document.querySelector('#animacija');
+    let dugmePusti=document.querySelector('#pusti');
+    let dugmeZaustavi=document.querySelector('#zaustavi');
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'data.json'
+    });
+    dugmeZaustavi.addEventListener('click', function() {
+        animationSkipForward.pause();
+    });
+    dugmePusti.addEventListener('click', function() {
+        animationSkipForward.play();
+    });
+</script>
+
+
+
+
+<div class="container">
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/island_glecer.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Vatnajökull - najveći glečer</h2>
+                    <p> 
+                        Oko 11% površine Islanda prekriveno je lednicima.
+                        Najveći islandski glečer je Vatnajökull sa površinom od 8.300 kvadratnih kilometara, 
+                        što je jednako površini svih glečera na evropskom kopnu zajedno.
+                        Hodanje po glečerima je iskustvo zbog kog mnogi dolaze ovde, ali treba se biti oprezan 
+                        jer postoje opasnosti i ne treba ih ignorisati. Iako  mogu izgledati pasivni i mirni, 
+                        glečeri se neprestano kreću i menjaju, stvarajući nove pukotine i rupe, a samim tim veliku 
+                        opasnost za potencijalne penjače. Ako mislite da je islandsko 
+                        vreme nepredvidivo – stvari postaju sve ekstremnije na vrhu lednika, ali upravo to 
+                        predstavlja izazov i tako se upotpunjuje iskustvo hodanja po glečerima.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Plava laguna</h2>
+                    <p>
+                        Plava laguna, smeštena u Grindaviku, ribarskom gradiću južno od Rejkavika, danas je jedna od najvećih 
+                        turističkih atrakcija na Islandu. Ova geotermalna banja nudi jedinstveno iskustvo uživanja u 
+                        toplim mineralnim bazenima čije dno pokriva vulkanska lava. Voda je stalno zagrejana na 37-39°C, 
+                        dok je prosečna spoljašnja temperatura oko 5°C. Bogati geološki slojevi izbacuju na površinu obilje 
+                        minerala koji vodi daju lekovita svojstva. Bazeni su nastali 1976. godine kada se voda iz novosagrađene
+                         elektrane spontano izlila u udubljenje obloženo ugašenom vulkanskom lavom. Kompleks nije korišćen 
+                         sve do 1981. godine, kada su ljudi počeli da dolaze da se kupaju.
+                    </p>
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/island_plava_laguna.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/island_gullfoss.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Gullfoss Falls</h2>
+                    <p>
+                        Smešteni u kanjonu reke Hvita koja se obrušava u kanjon kao da propada u zemlju, na jugozapadu 
+                        Islanda vodopadi Gulfos su definitivno jedni od najlepših na svetu. Prosečna količina vode koja 
+                        pada preko vodopada je 140 m³/s leti, a 80 m³/s zimi. Postojali su pokušaji da se vodopad iskoristi 
+                        za proizvodnju električne energije, ali to je propalo, pa je Gullfoss danas zaštićen i 
+                        jedna je od najpopularnijih turističkih atrakcija na Islandu. Gullfoss je deo takozvanog  Zlatnog 
+                        kruga – popularnog jednodnevnog izleta na Islandu, gde spadaju i “Thingvellir” (nacionalni park gde 
+                        se nalazi i najveće prirodno jezero na Islandu “Thingvallavatn”) i “Strokkur” (gejzir koji se 
+                        aktivira na svakih 5-10 minuta i koji može baciti mlaz i do 20 m). 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Gejziri</h2>
+                    <p>
+                        Island je ostrvo smešteno na Srednjeatlantskom podmorskom grebenu, najvećem podmorskom planinskom sistemu na svetu, 
+                        te se nalazi na području koje je jedno od seizmički najaktivnijih na svetu. Kombinacija prirodnih preduslova 
+                        omogućila je formiranje gejzira. Veliki Gejzir (ili samo Gejzir) se nalazi na Islandu u oblasti Haukadulur i 
+                        on je prvi gejzir poznat Evropljanima, prvi gejzir ikada pominjan u školskom programu kao i prvi ikada opisani gejzir. 
+                        Vremenom je izgubio svoju aktivnost, ali posle snažnih zemljotresa 1896. ponovo je aktiviran. Danas Gejzir ima 
+                        erupcije 3 puta dnevno i one izgledaju veličanstveno. Naučnici tvrde da su gejziri postvulkanska aktivnost, odnosno 
+                        da su oni poslednja faza gašenja aktivnih vulkana. Ako je to tačno treba požuriti na Island i obići neke od najlepših 
+                        gejzira sveta dok još nije kasno.
+                    </p>
+                </div>
+                </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/island_gejzir.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+</body>
+</html>

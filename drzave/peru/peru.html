@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peru</title>
+    <link rel="icon" href="../../favicon.ico">
+    <!-- booststrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">    
+</head>
+<body>
+    
+    <div id="animacija"> </div>
+    <script src="../peru/lottie.js"></script>
+    <audio id="myAudio">
+        <source src="peru.wav" type="audio/wav">
+      </audio>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button id="pusti" class="btn btn-info" onclick="playAudio()" type="button">Pusti animaciju</button>
+        <button id="zaustavi" class="btn btn-info" onclick="stopAudio()" type="button">Zaustavi animaciju</button>
+    </div>
+<script>
+    var x = document.getElementById("myAudio"); 
+    function playAudio() { 
+    x.play(); 
+    }
+    function stopAudio() { 
+    x.pause(); 
+    }
+    let iconSkipForward = document.querySelector('#animacija');
+    let dugmePusti=document.querySelector('#pusti');
+    let dugmeZaustavi=document.querySelector('#zaustavi');
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'data.json'
+    });
+    dugmeZaustavi.addEventListener('click', function() {
+        animationSkipForward.pause();
+    });
+    dugmePusti.addEventListener('click', function() {
+        animationSkipForward.play();
+    });
+</script>
+
+
+
+
+<div class="container">
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/peru_macu.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Macchu Picchu</h2>
+                    <p> 
+                        Kao što su piramide tajna Egipta, tako je Maču Pikču tajna Perua. Niko pouzdano ne zna kako je I zašto
+                        sagređen ovaj stari grad, ni šta se tačno desilo sa njegovim stanovnicima. Pretpostavlja se da je izgrađen
+                        pre 13.veka. Okružen je rekom sa tri strane, a opkoljen je kamenim zidom na jedinoj strani sa koje mu se
+                        prilazi.
+                        Misterija je mnogo koje se vezuju za ovo impresivno delo arhitekture, a jedna od teorija govori da je
+                        izgrađeno po uzoru na sliku sveta. Uglavnom je prva asocijacija turistima na Peruu.
+                        Međutim, civilizacija Inka nije jedina koja u ovom području ima svoje ostatke I ruševine. Na severu se
+                        mogu pronaći drevne civilizacije u gradu Čan Čan, dok se na jugu Perua mogu pronaći interesantni dokazi
+                        drevnih kultura u jezeru Titikaka, gradu Puno I arheološkom nalazištu Nazca Lines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Titicaca</h2>
+                    <p>
+                        Osim slavnih raznobojnih jezera u Svetoj dolini, na granici Perua I Bolivije nalazi se I
+                        najviše jezero u kojem je moguća plovidba.
+                        Jezero Titikaka nalazi se na visini od 3820 metara. Inke su ovo jezero zvale “utrobom
+                        čovečanstva” jer su verovale da vode poreklo sa Titikake. Na jezeru se nalaze
+                        plutajuća ostrva, a na njima žive plemena Uru.
+                        Pripadnici ovog plemena svoje kuće I čamce prave od trske zvane totora. Bave se
+                        pretežno turizmom.U okolini Titikake živi veliki broj egzotičnih životinja koje 
+                        čine posebnu vrednost i aktrakciju ovog kraja. Sa svojim prirodnim i istorijskim 
+                        lepotama, jezero Titikaka je jedna od najlepših južnoameričkih destinacija.
+                    </p>
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/peru_titikaka.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/peru_arequipa.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Arequipa</h2>
+                    <p>
+                        Arekipa je glavni I najveći grad istoimene provincije I regiona na jugu Perua.
+                        Ono što Arekipu izdvaja u odnosu na ostale gradove jesu zgrade izgrađene od belog
+                        vulkanskog krečnjaka, jer se vulkan El Misti nalazi na severoistoku.
+                        Ovo mesto je zato I poznato pod nazivom “beli grad”. Danas je privredni I tgovački
+                        centar, a staro jezgro je na listi Unesco svetske baštine.
+                        Nad nebom Arekipe sunce sija preko 300 dana godišnje. Za vreme boravka u ovom
+                        gradu, poseta crkve svete Kataline, kanjon Kolka I vulkan Misti je obavezna.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Cabo Blanco – plaža na kojoj je pecao Hemingvej</h2>
+                    <p>
+                        Pisac Ernest Hemingvej je pecao ovde, a veliki crni marlimi koji su tu ulovljeni, 
+                        navodno su bili inspiracija za roman „Starac i more“. Na čamcima koji uplovljavaju u daljinu 
+                        su vešti ribari koji hvataju crne i šarene marline i tune. Osim za pecanje, Kabo Blanko je i 
+                        izazov za surfere i to u periodu od novembra do januara. 
+                        Bilo da ste ljubitelj aktivnog odmora, i tražite avanturu sa surferskom daskom, ili ste više tip
+                        koji preferira kopno – na ovoj lokaciji ćete sigurno pronaći nešto po svojoj meri.
+                        Severna obala Perua ima toplije vode i sunčana je tokom cele godina.
+                    </p>
+                </div>
+                </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/peru_cabo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+</body>
+</html>

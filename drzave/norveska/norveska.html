@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norveška</title>
+    <link rel="icon" href="../../favicon.ico">
+    <!-- booststrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="animacija"> </div>
+    <script src="../norveska/lottie.js"></script>
+    <audio id="myAudio">
+        <source src="Norveska.wav" type="audio/wav">
+      </audio>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button id="pusti" class="btn btn-info" onclick="playAudio()" type="button">Pusti animaciju</button>
+        <button id="zaustavi" class="btn btn-info" onclick="stopAudio()" type="button">Zaustavi animaciju</button>
+    </div>
+<script>
+    var x = document.getElementById("myAudio"); 
+    function playAudio() { 
+    x.play(); 
+    }
+    function stopAudio() { 
+    x.pause(); 
+    }
+    let iconSkipForward = document.querySelector('#animacija');
+    let dugmePusti=document.querySelector('#pusti');
+    let dugmeZaustavi=document.querySelector('#zaustavi');
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'data.json'
+    });
+    dugmeZaustavi.addEventListener('click', function() {
+        animationSkipForward.pause();
+    });
+    dugmePusti.addEventListener('click', function() {
+        animationSkipForward.play();
+    });
+</script>
+<div class="container">
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/norveska_aurora.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Aurora borealis</h2>
+                    <p> Polarna svetlost može da se vidi i iz mnogih severnih oblasti na Zemlji, 
+                        ali sever Norveške, Švedske, kao i Islanda važe za najbolja mesta kada je u 
+                        pitanju ovaj jedinstveni doživljaj. Ona nastaje kada veliki broj elektrona ide u pravcu Zemlje 
+                        duž njenog magnetnog polja i sudara se sa česticama vazduha. Vazduh potom šalje svetlost 
+                        koja izgleda kao fluorescencija i mi vidimo gomilu boja koje reflektuju gasove.
+                        Što je severniji deo Skandinavije to će sezona aurore borealis duže trajati. 
+                        Aurora Borealis se najlepše vidi u zoni iznad Arktičkog kruga. Koliko često možete videti 
+                        auroru borealis zavisi od toga gde se nalazite. U Tromsu (Norveška) koji je omljena destinacija za 
+                        turiste i u Nordkapu možete je videti svake vedre noći.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Fjordovi</h2>
+                    <p>Fjordovi su potopljene doline nekadašnjih lednika. Strmih su strana, uski i veoma duboki. 
+                        Npr. poznati Sogne fjord u Norveškoj dugačak je 180 km i dubok je preko 1.200 m, a njegove strane 
+                        su visoke do 1.500 m.
+                        Fjordovi se nalaze u oblastima koje su u pleistocenu bile zahvaćene glacijacijom i 
+                        čiji su se lednici završavali u moru (Aljaska, Kanada, Island, Čile, Novi Zeland) ali su 
+                        najtipičniji za Skandinaviju.Tipične karakteristike fjorda su uzak rukavac, erodirano dno duboko 
+                        ispod morske površine, strme padine kopna koje ga okružuje, a koje se pružaju duboko pod more, i 
+                        izlaz na otvoreno more. Fjordovi su nastajali u ledeno doba kad su veliki lednici, otapajući se, 
+                        putovali prema moru odnoseći zarobljene stene i svojim abrazivnim delovanjem dubili kopno.</p>
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/norveski_fjord.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/norveska_dan_drzavnosti.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Dan državnosti</h2>
+                    <p>Centralni deo proslave predstavlja povorka u kojoj učestvuju učenici svih osnovnih i srednjih škola, 
+                        kao i školski limeni bendovi, i ona se organizuje u svim većim gradovima. Najveća je, naravno, u Oslu, 
+                        i traje veći deo dana. U Oslu povorka ide do kraljevskog dvora, gde na balkonu stoji kraljevska porodica 
+                        i mahanjem pozdravlja decu i ostale okupljene građane. Ceo grad je okićen norveškim zastavama, a mnogi 
+                        ljudi tako kite i svoje kuće, ili nose zastave sa sobom. Takođe je uobičajeno nositi narodnu nošnju iz 
+                        svog kraja – ili bunad, kako se kaže na norveškom. Ove narodne nošnje su veoma skupocene, prenose se sa 
+                        kolena na koleno, a Norvežani ih nose u posebnim prilikama, kao na primer na proslavi velike mature ili 
+                        na venčanjima. 17. maj je dan kada se na ulicama Osla može videti veliki broj nošnji iz različitih krajeva 
+                        Norveške.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Norveški trolovi</h2>
+                    <p>Često okarakterisani kao dlakava, nezgrapna stvorenja koja se izlaganjem sunčevoj svetlosti 
+                        pretvaraju u kamen i imaju neprijateljski stav prema ljudskim bićima, trolovi su zastrašujuća 
+                        bića nordijske mitologije. Trolovi su po prvi put uočeni u nordijskoj mitologiji i skandinavskom 
+                        folkloru. Pružili su inspiraciju mnogim piscima, među kojima se najviše ističu Dž. K. Rouling 
+                        (autorka serije knjige o Hariju Poteru) i Dž. R. R. Tolkin (autor romana “Gospodar prstenova”, 
+                        “Hobit” i mnogih drugih). Trolovi se uglavnom opisuju kao stvorenja koja žive na planinama ili 
+                        u pećinama, najčešće u malim grupama. Reč trol (na staronorveškom tröll) odnosi se na demona, đavola, 
+                        a ponekad čak i vukodlaka. Odlikuje ih izrazito veliki apetit, stoga će često jesti kamenje, stoku, 
+                        ljude...
+                    </p>
+                </div>
+                </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/norveski_trol.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+</body>
+</html>

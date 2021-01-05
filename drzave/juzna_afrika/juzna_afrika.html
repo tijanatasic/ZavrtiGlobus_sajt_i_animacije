@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Južna Afrika</title>
+    <link rel="icon" href="../../favicon.ico">
+    <!-- booststrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <div id="animacija"> </div>
+    <script src="../juzna_afrika/lottie.js"></script>
+
+
+    <audio id="myAudio">
+        <source src="afrika.wav" type="audio/wav">
+      </audio>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button id="pusti" class="btn btn-info" onclick="playAudio()" type="button">Pusti animaciju</button>
+        <button id="zaustavi" class="btn btn-info" onclick="stopAudio()" type="button">Zaustavi animaciju</button>
+    </div>
+<script>
+    var x = document.getElementById("myAudio"); 
+    function playAudio() { 
+    x.play(); 
+    }
+    function stopAudio() { 
+    x.pause(); 
+    }
+    let iconSkipForward = document.querySelector('#animacija');
+    let dugmePusti=document.querySelector('#pusti');
+    let dugmeZaustavi=document.querySelector('#zaustavi');
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'data.json'
+    });
+    dugmeZaustavi.addEventListener('click', function() {
+        animationSkipForward.pause();
+    });
+    dugmePusti.addEventListener('click', function() {
+        animationSkipForward.play();
+    });
+</script>
+
+
+
+<div class="container">
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/afrika_kruger.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Kruger park</h2>
+                    <p> 
+                        Zaštićeni rezervat u Južnoj Africi-Kruger Park je omiljena destinacija za ljubitelje prirode koji žele da se
+                        sažive sa afričkom divljinom.
+                        Pored velike raznovrsnoti flore I faune, ono što Kruger čini zanimljivim jeste što možete voditi sopstveni
+                        safari bez vodiča. Park raspolaže velikim brojem puteva, koji su prilagođeni turistima da se sami voze.
+                        Ppostoji I pešačenje divljom stazom. U pitanju je višednevna
+                        tura, u malim grupama sa noćenjem u malim kampovima.
+                        Pored pešačenje I vožnje kolima, postoji I mogućnost vožnje letećim balonom. Vožnja balonom po nebu 
+                        predstavlja jedan od najlepsih načina da istražite afričko tlo.
+                        Leteći preko parka Kruger videćete Drakensbergen brda na zapadu,kao I prostrane zelene ravnice, a ako
+                        budete imali sreće možete videti I krdo žirafa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Rt dobre nade</h2>
+                    <p>
+                        Rt dobre nade - impresivan prostor između najprivlačnijeg dela Južnoafričke Republike, smešten na
+                        zanimljivom spoju dva okeana - Atlanskog I Indijskog.
+                        Posmatranjem sa obale se vidi samo ogromna voda. Tek kada se penjanjem, najvratolomnijom žičarom na
+                        svetu Tejbl-Mauntejn, planinu iznad obale, zatim vožnja asfaltnim, a potom I pešačenje kamenim putem do
+                        samog vrha Rta dobre nade, ili do Si-pointa-imaćemo jedinstven pogled na spoj dve najveće svetske
+                        površine.
+                        Za slikanje I uspomenu sa ovog čarobnog mesta služi masivni svetionik koji se nalazi na 87 metara iznad
+                        mora, čiji prodorni zraci brodovima šalju upozoravajući signal da plove opasnim vodama
+                    </p>
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/afrika_rt.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/afrika_planina.jpg" alt="">
+                </div>
+            </div>
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Stona planina</h2>
+                    <p>
+                        Južnoafrička Stona planina zvanično je proglašena za jedno od novih sedam svetskih čuda prirode.
+                        Stona planina nije samo spektakularna podloga za Kejptaun, koji je jedan od najlepših gradova na svetu,
+                        već ona posetiocima nudi I neverovatna iskustva tokom šetnje njenom prirodom.
+                        Ova planina sa ravnim vrhoom visoka je 1086 metara I nudi prelep pogleda na Atlantik, uz to ona čini
+                        jedan deo nacionalnog parka.
+                        Na planini se nalaze tri poznata vrha: Devilski Pik, Lavova glava I Signalno brdo.
+                        Stona planina je bogata biljnim I životinjskim svetom, većinom su to invazivne vrste koje se nekontralisano
+                        šire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drzave">
+        <div class="red">
+            <div class="kolona">
+                <div class="tekst">
+                    <h2>Bolders plaža</h2>
+                    <p>
+                        Bolders plaža se nalazi u Kejp Taunu, blizu grada Simons. Iako je jedna od najlepših plaža njena lepota je
+                        nije stavila među najpopularnije plaže, već su to uradili njeni stanovnici- afrički pingvini.
+                        Okružena je velikim granitnim stenama koje je štite od velikih valova I vetrova, dok su pesak I kristalno
+                        čisto more idealno mesto za kupanje.
+                        Ova ugrožena vrsta životinja na plaži Bolders svake godinne okuplja ljude koji ih mogu posmatrati I
+                        proučavati u prirodnom okruženju. Afrički pingvini se tu nalaze od 1983.godine a leti ih ima najviše.
+                        Zašto su se pingvini bas ovde smestili? Priča kreće ovako...
+                        Dvoje pingvina primećeno je ovde 1982.godine, a od tada se taj broj pingvina povećao na 3000.
+                        Uglavnom zbog hrane, odnosno povećanjem dotoka srdela I inćuna, ovo je zaliv na kom su pingvini
+                        odlučili da naprave svoj dom. 
+                    </p>
+                </div>
+                </div>
+            <div class="kolona">
+                <div class="slika">
+                    <img src="../../images/afrika_plaza.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+</body>
+</html>

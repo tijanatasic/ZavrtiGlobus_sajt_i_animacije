@@ -1,0 +1,160 @@
+body{
+    background-color: white;
+    margin: 0;
+    background-image: url(images/Bg-01.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'Charm', cursive;
+}
+
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+#animacija{
+    margin: 2% auto;
+    width: 50%;
+}
+
+.red{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.kolona{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.slika{
+    margin-top: 3%;
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    /* flex: 50%; */
+}
+.slika img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+
+    /* margin-left: 6%; */
+}
+
+.d-grid{
+    margin-top: 5%;
+    width: 30%;
+}
+
+.btn-info{
+    color: white;
+    font-size: 120%;
+}
+
+.tekst{
+    height: 350px;
+    width: 80%;
+    flex: 50%;
+}
+
+.drzave{
+    margin-left: 8%;
+    padding-bottom: 12%;
+}
+
+.container{
+    /* background-image: url(images/Bg-01.png);
+    background-position: center;
+    background-size: cover; */
+    padding-top: 12%;
+    /* width: 100%; */
+}
+
+#proba{
+    background-image: url(images/HomePage2-01.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 1000px) {
+    .red {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .drzave{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .drzave:nth-child(2) .slika{
+        order: -1;
+    }
+
+    .slika{
+        display: flex;
+        order: 1;
+        height: auto;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .tekst{
+        /* display: flex;
+        flex-direction: column; */
+        order: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slika img{
+        height: 220px;
+        width: 60%;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #animacija{
+        width:auto;
+    }
+  }
